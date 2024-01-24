@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CargoController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\DepartamentoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::resource('usuarios', UsuarioController::class);
+Route::get('departamentos', [DepartamentoController::class, 'index']);
+Route::get('cargos', [CargoController::class, 'index']);
