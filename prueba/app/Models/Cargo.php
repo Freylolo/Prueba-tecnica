@@ -9,6 +9,6 @@ class Cargo extends Model
 {
         use HasFactory;
     
-        protected $fillable = ['codigo', 'nombre_carg', 'activo', 'idUsuarioCreacion'];
+        protected $fillable = ['codigo', 'nombre_carg', 'activo'];
     
 }

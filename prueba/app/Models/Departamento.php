@@ -9,6 +9,6 @@ class Departamento extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['codigo', 'nombre_dep', 'activo', 'idUsuarioCreacion'];
+    protected $fillable = ['codigo', 'nombre_dep', 'activo'];
 
 }

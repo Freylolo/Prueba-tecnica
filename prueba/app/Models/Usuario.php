@@ -10,7 +10,7 @@ class Usuario extends Model
     use HasFactory;
     
     protected $fillable = [
-        'usuario', 'primerNombre', 'segundoNombre', 'primerApellido',
+        'usuario', 'email', 'primerNombre', 'segundoNombre', 'primerApellido',
         'segundoApellido', 'idDepartamento', 'idCargo'
     ];
 }

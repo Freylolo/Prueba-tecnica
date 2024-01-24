@@ -14,11 +14,10 @@ class CargosTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('cargos')->insert([
-            ['nombre_carg' => 'Administrador'],
-            ['nombre_carg' => 'Desarrollador Fronted'],
-            ['nombre_carg' => 'Desarrollador Backend'],
-            ['nombre_carg' => 'Guardia'],
-
+            ['nombre_carg' => 'Administrador', 'codigo' => 'ADM', 'activo' => true],
+            ['nombre_carg' => 'Desarrollador Frontend', 'codigo' => 'DEV-FE', 'activo' => true],
+            ['nombre_carg' => 'Desarrollador Backend', 'codigo' => 'DEV-BE', 'activo' => true],
+            ['nombre_carg' => 'Guardia', 'codigo' => 'GRD', 'activo' => true],
         ]);
     
     }

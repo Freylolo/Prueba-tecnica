@@ -5,67 +5,56 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Usuario;
 
-
 class UsuarioController extends Controller
 {
     public function index()
     {
-        $usuarios = Usuario::all();
+        $usuarios = Usuario::paginate(10); // paginación con 10 registros por página
         return response()->json($usuarios, 200);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
-            'usuario' => 'required|string|unique:users',
+            'usuario' => 'required|string|unique:usuarios',
+            'email' => 'required|email|unique:usuarios',
             'primerNombre' => 'required|string',
-            'segundoNombre' => 'string',
+            'segundoNombre' => 'string|nullable',
             'primerApellido' => 'required|string',
-            'segundoApellido' => 'string',
-            'idDepartamento' => 'numeric',
-            'idCargo' => 'numeric',
+            'segundoApellido' => 'string|nullable',
+            'idDepartamento' => 'numeric|nullable',
+            'idCargo' => 'numeric|nullable',
         ]);
 
         $usuario = Usuario::create($request->all());
         return response()->json($usuario, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         $usuario = Usuario::findOrFail($id);
         return response()->json($usuario, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $usuario = Usuario::findOrFail($id);
 
         $request->validate([
-            'usuario' => 'required|string|unique:users,usuario,' . $id,
+            'usuario' => 'required|string|unique:usuarios,usuario,' . $id,
+            'email' => 'required|email|unique:usuarios,email,' . $id,
             'primerNombre' => 'required|string',
-            'segundoNombre' => 'string',
+            'segundoNombre' => 'string|nullable',
             'primerApellido' => 'required|string',
-            'segundoApellido' => 'string',
-            'idDepartamento' => 'numeric',
-            'idCargo' => 'numeric',
+            'segundoApellido' => 'string|nullable',
+            'idDepartamento' => 'numeric|nullable',
+            'idCargo' => 'numeric|nullable',
         ]);
 
         $usuario->update($request->all());
         return response()->json($usuario, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $usuario = Usuario::findOrFail($id);

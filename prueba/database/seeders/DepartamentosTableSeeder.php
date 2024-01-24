@@ -15,10 +15,10 @@ class DepartamentosTableSeeder extends Seeder
     public function run()
     {
         DB::table('departamentos')->insert([
-            ['nombre' => 'Departamento de Marketing'],
-            ['nombre' => 'Departamento de Informatica'],
-            ['nombre' => 'Departamento de Seguridad'],
-            ['nombre' => 'Departamento de Administracion'],
+            ['nombre_dep' => 'Departamento de Marketing', 'codigo' => 'MKT', 'activo' => true],
+            ['nombre_dep' => 'Departamento de Informatica', 'codigo' => 'IT', 'activo' => true],
+            ['nombre_dep' => 'Departamento de Seguridad', 'codigo' => 'SEC', 'activo' => true],
+            ['nombre_dep' => 'Departamento de Administracion', 'codigo' => 'ADM', 'activo' => true],        
 
         ]);
     
