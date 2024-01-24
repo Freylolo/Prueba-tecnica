@@ -1,7 +1,5 @@
 # Prueba Tecnica
 
-Descripción corta y concisa del propósito del proyecto.
-
 ## Desarrollador
 
 - **Nombre:** Freya Lopez Lopez
