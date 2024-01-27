@@ -9,7 +9,7 @@ class UsuarioController extends Controller
 {
     public function index()
     {
-        $usuarios = Usuario::paginate(10); // paginación con 10 registros por página
+        $usuarios = Usuario::paginate(5); // paginación  por página
         return response()->json($usuarios, 200);
     }
 

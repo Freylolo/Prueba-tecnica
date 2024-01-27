@@ -1,6 +1,7 @@
 import { Component ,  OnInit} from '@angular/core';
 import { ApiService } from '../api.service';
 
+
 @Component({
   selector: 'app-cargos',
   templateUrl: './cargos.component.html',
@@ -11,12 +12,11 @@ export class CargosComponent implements OnInit {
   cargos: any[] = []; 
 
   constructor(private apiService: ApiService) {}
-
+  
   ngOnInit(): void {
     this.apiService.getCargos().subscribe((data) => {
-      console.log(data);
-      this.cargos = Object.values(data);
+      this.cargos = data;
     });
-    
   }
 }
+
