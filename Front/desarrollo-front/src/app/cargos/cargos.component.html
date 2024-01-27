@@ -1,0 +1,22 @@
+<!-- cargos.component.html -->
+
+<h2>Listado de Cargos</h2>
+
+<button type="button" class="btn btn-primary" (click)="agregarCargo()">Agregar Cargo</button>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre del Cargo</th>
+      <!-- Otros encabezados de columnas si es necesario -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cargo of cargos">
+      <td>{{ cargo.id }}</td>
+      <td>{{ cargo.nombre_carg }}</td>
+      <!-- Otros campos de datos si es necesario -->
+    </tr>
+  </tbody>
+</table>

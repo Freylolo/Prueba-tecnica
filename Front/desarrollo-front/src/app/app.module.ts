@@ -7,22 +7,9 @@ import { AppComponent } from './app.component';
 import { CargosComponent } from './cargos/cargos.component';
 import { DepartamentosComponent } from './departamentos/departamentos.component';
 import { UsersComponent } from './users/users.component';
-
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AgregarUsuariosComponent } from './agregar-usuarios/agregar-usuarios.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditarUsuariosComponent } from './editar-usuarios/editar-usuarios.component';
 
 
 @NgModule({
@@ -31,6 +18,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CargosComponent,
     DepartamentosComponent,
     UsersComponent,
+    AgregarUsuariosComponent,
+    EditarUsuariosComponent,
     
   ],
   imports: [
@@ -38,20 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatSnackBarModule,
+    NgbModalModule,
     
   ],
   providers: [

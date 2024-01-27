@@ -56,12 +56,12 @@ export class ApiService {
     );
   }
 
-  deleteUser(user: any): Observable<any> {
-    return this.http.delete(`http://127.0.0.1:8000/api/usuarios/${user.id}`).pipe(
+  deleteUser(userId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/usuarios/${userId}`).pipe(
       catchError(this.handleError)
     );
   }
-
+  
   getArrayFromObject(obj: any): any[] {
     return Object.values(obj);
   }
