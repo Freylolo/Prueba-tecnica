@@ -1,13 +1,15 @@
 import { Component, OnInit, ElementRef, ViewChild, TemplateRef } from '@angular/core';
 import { ApiService } from '../api.service';
 import { MatDialog } from '@angular/material/dialog';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.sass']
+  styleUrls: ['./users.component.sass'],
+  providers: [RouterLink]
 })
 export class UsersComponent implements OnInit {
 

@@ -10,6 +10,7 @@ import { ApiService } from '../api.service';
 export class CargosComponent implements OnInit {
 
   cargos: any[] = []; 
+  
 
   constructor(private apiService: ApiService) {}
   
